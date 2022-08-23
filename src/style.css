@@ -82,10 +82,10 @@ header a:hover{
 #hero{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center center;
   text-align: center;
   flex-direction: column;
-  height: 90vh;
+  height: 70vh;
   color:white;
   background-image: linear-gradient(
       0deg,

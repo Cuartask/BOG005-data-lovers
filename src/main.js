@@ -10,4 +10,5 @@ console.log(data.athletes);
 console.log(data.athletes[3].name);
 
 
-
+const buttonOrder=document.querySelector("inicio");
+but
