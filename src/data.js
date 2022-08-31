@@ -1,3 +1,4 @@
+
 export const mostrarData = (datos) => {
     const data = datos["athletes"].map(elemento => elemento.name);
     return data;

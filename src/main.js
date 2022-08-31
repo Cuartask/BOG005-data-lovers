@@ -1,3 +1,4 @@
+
 /* eslint-disable no-undef */
 import { ordenarNombresA_Z, ordenarNombresZ_A, calculo, calculo_porcentaje } from './data.js';
 import data from './data/athletes/athletes.js';
@@ -119,3 +120,4 @@ new Chart($grafica, {
 //         let grafico = new google.visualization.PieChart(document.getElementById('myChart'));
 //         chart.draw(data, options);
 //       }
+
