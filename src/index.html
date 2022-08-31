@@ -1,90 +1,103 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="vieport" content="width=device-width,initial-scale=1.0">
-    <title>DL Rio olimpics 2016</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="vieport" content="width=device-width,initial-scale=1.0">
+  <title>DL Rio olimpics 2016</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+</head>
 
-  <body>
-    <header>
-      <div class="container"> 
-        <div class "logo"> RIO 2016</div>
-        <nav class="nav">
-              <a href="#Paises"
-              class="nav-link"> Países</a>
-              <a href="#Atletas"
-              class="nav-link">Filtrar por.. </a>
-              <a href="#Mujeres"
-              class="nav-link">Mujeres mas Destacadas</a>
-              <a href="#Deportes"
-              class="nav-link">Deportes</a>
-              <a href="#Top 10 de Medallas"
-              class="nav-link">Top 10 de Medallas</a>
-        </nav>
-      </div>
-    </header >
+<body>
+  <header>
+    <div class="container">
+      <div class "logo"> Juegos Olimpicos RIO 2016 </div>
 
-    <section id="hero">
-       <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
-       <!-- <form action="https:..."> -->
-        <select id="buttonOrder">
-          <option value="" disabled selected>ORDENAR</option>
-          <option value="a-z" id="az">A - Z</option>
-          <option value="z-a" id="za">Z - A</option>
-        </select>
-       <!-- <button id="orden">Ordenar A - Z / POR EDADES DE MAYOR A MENOR</button> -->
-     </section>
-              
-     <section id="Olimpics-Games">
-       <table class="table">
-        <thead>
-          <tr>
-            <th>Nombre Atleta</th>
-            <th>Edad</th>
-            <th>Género</th>
-            <th>Deporte</th>
-            <th>Medalla</th>
-          </tr>
-        </thead>
-        <tbody id="contenido">
-          <tr>
-            <th>name</th>
-            <th>age</th>
-            <th>femal</th>
-            <th>sport</th>
-            <th>medal</th>
-          </tr>
-        </tbody>
-       </table>
-     </section>
+      <nav class="nav">
+
+<!--     
+        <div class="wrapper">
+
+          <div id="search-container">
+            <input type="search" id="search-input" placeholder="Busca tu atleta preferido" />
+            <button id="search">Search</button>
+          </div> --> 
+          <button>Conoce +</button>
+          <p>
+            <select id="buttonOrder">
+              <option value="" disabled selected>ORDENAR</option>
+              <option value="a-z" id="az">A - Z</option>
+              <option value="z-a" id="za">Z - A</option>
+            </select>
+          </p>
+          <p>
+            <select name="medallas" id="medallas" class="medallas">
+              <option value="">Medallas</option>
+              <option value="Gold">Oro</option>
+              <option value="Silver">Plata</option>
+              <option value="Bronze">Bronce</option>
+            </select>
+          </p>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
+  </section>
 
 
-     
-   <section id="final">
-      <h2>videos </h2>
-      <button>Play</button>
-  </section> 
+    
+    <canvas id="grafica"></canvas>
+    
+
+  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+
+  <section id="Olimpics-Games">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre Atleta</th>
+          <th>Edad</th>
+          <th>Género</th>
+          <th>Deporte</th>
+          <th>Medalla</th>
+        </tr>
+      </thead>
+      <tbody id="contenido">
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>femal</th>
+          <th>sport</th>
+          <th>medal</th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+  <section id="final">
+    <h2>videos </h2>
+    <button>Play</button>
+  </section>
 
   <footer>
-      <div class="container">
-          <p>&copy; ProgramaYa 2021</p>
-      </div>
+    <div class="container">
+      <p>&copy; ProgramaYa 2021</p>
+    </div>
   </footer>
+  
   <script src="main.js" type="module"></script>
+ 
 </body>
-</html>
-   
-   <!-- <footer></footer>
-    <div id="root"></div>
-    
-  </body>
-</html> -->
 
+</html>
+
+    
