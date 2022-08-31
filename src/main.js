@@ -1,9 +1,8 @@
-// import { ordenarNombres, ordenarEdad } from "./data.js";
-
 import data from './data/athletes/athletes.js';
+import { ordenarNombresAZ } from "./data.js";
+import { filtrarMedallas } from "./data.js";
 console.log(data);
 const dataAtletas = data.athletes
-
 
 const pintarData = (data) => {
     let plantilla = ""
@@ -24,22 +23,28 @@ const pintarData = (data) => {
 
 pintarData(dataAtletas)
 
-// const buttonOrder = document.querySelector("#buttonOrder");
-// buttonOrder.addEventListener("change", () => {
-//     const valueOrder = buttonOrder.value;
-//     dataAtletas.innerHTML = "";
-//     showData(ordenarNombres(data,valueOrder));
+const selectM = document.getElementById("medallas")
+selectM.addEventListener("change", function (event) {
+    let selectValue = event.target.value
+    let arryFilter = filtrarMedallas(selectValue, data.athletes)
+    //let arryFilter = filtrarGenero(selectValue,data.athletes)
+    pintarData(arryFilter)
 
-// });
+})
 
-// import ordenarNombres from './data/athletes/ordenarNombres.js';
-// const showData = (parametro) => {
-//     let show = "";
-//     parametro.forEach((element) => {
-//         const atletas = `
-//             <div class="atleta" data-name="${element.name} name="athletes"></div> 
-//             `;
-//             show += atletas;
-//     });
-//     ordenarNombres.innerHTML = show;
-// }
+let ordenPais= document.getElementById("ordenAz")
+ordenPais.addEventListener("change",(e)=>{
+    let eventoAz=e.target.value;
+    let arryOrden=ordenarNombresAZ(eventoAz,dataAtletas)
+    pintarData(arryOrden)
+
+})
+
+let includeArray = false;
+for (let i = 0; i < data.athletes.length; i++) {
+    const element = data.athletes[i];
+    if (element.gender === 'F') {
+        includeArray = true;
+    }
+console.log(includeArray);
+}

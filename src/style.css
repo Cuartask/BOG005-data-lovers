@@ -45,7 +45,7 @@ header{
 
 }
 
-header .log{
+header .logo{
   margin: 0;
   padding: 25px 30px;
   font-weight: bold;
@@ -83,7 +83,7 @@ header a:hover{
   justify-content: center center;
   text-align: center;
   flex-direction: column;
-  height: 70vh;
+  height: 50vh;
   color:white;
   background-image:  linear-gradient(
       0deg,
@@ -106,7 +106,7 @@ header a:hover{
   font-size: 1.75em;
 
 }
-#Reseña .container{
+* #Reseña .container{ */
       text-align: center;
       padding: 200px 12px;
   } 
