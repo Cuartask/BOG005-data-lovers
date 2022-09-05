@@ -1,5 +1,7 @@
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html{
@@ -101,6 +103,7 @@ header a:hover{
   }
 
 #hero button{
+  margin: ;
   font-size: 1.75em;
 
 }
