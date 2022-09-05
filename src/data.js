@@ -44,7 +44,8 @@ export const ordenarNombresZ_A = (datos) => {
 }
 
 //filtro por Medallas 
-export function calculo(data, campofiltrado, valor) {
+export function filtrado(data, campofiltrado, valor) {
+    console.log(data);
     const medallas = data.filter(function (datoMedalla) {
         return datoMedalla[campofiltrado] === valor
     })
@@ -55,7 +56,7 @@ export function calculo(data, campofiltrado, valor) {
 // ...........CALCULO..........
 
 export function calculo_porcentaje(data, campofiltrado, valor) {
-    const elemento_filtrado = calculo(data, campofiltrado, valor)
+    const elemento_filtrado = filtrado(data, campofiltrado, valor)
     const porcentaje = (elemento_filtrado.length / data.length) * 100
     return Math.round(porcentaje);
 }
