@@ -1,4 +1,3 @@
-
 /* eslint-disable no-undef */
 import { ordenarNombresA_Z, ordenarNombresZ_A, filtrado, calculo_porcentaje } from './data.js';
 import data from './data/athletes/athletes.js';
@@ -102,22 +101,4 @@ new Chart($grafica, {
     },
 });
 
-
-// google.charts.setOnLoadCallback(dibujar);
-
-// function dibujar() {
-//     let data = new google.visualization.DataTable();
-//     data.addColumn('string', 'Topping');
-//         data.addColumn('number', 'Slices');
-//         data.addRows([
-//           ['Mujeres', 48],
-//           ['Hombres', 52],
-//         ]);
-//         let options = {'title':'Porcentaje de hombres y mujeres que participaron en las Olimpiadas',
-//                        'width':400,
-//                        'height':300};
-
-//         let grafico = new google.visualization.PieChart(document.getElementById('myChart'));
-//         chart.draw(data, options);
-//       }
 
