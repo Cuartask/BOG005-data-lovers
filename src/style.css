@@ -323,3 +323,7 @@ footer .container{
 
   }
 
+  #grafica{
+    max-width: 500px;
+}
+

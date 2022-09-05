@@ -1,102 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="vieport" content="width=device-width,initial-scale=1.0">
-    <title>DL Rio olimpics 2016</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  </head>
 
- <body>
-    <header>
-      <div class="container"> 
-        <div class="logo"> Juegos Olimpicos RIO 2016</div>
-        <nav class="nav">
-             <p>
-               <select name="medallas" id="medallas" class="medallas">
-                <option value="">Medallas</option>
-                <option value="Gold">Oro</option>
-                <option value="Silver">Plata</option>
-                <option value="Bronze">Bronce</option>
-               </select>
-              </p> 
-              <p>
-                <select name="genero" id="genero" class="genero">
-                  <option value="">Genero</option>
-                  <option value="M">Masculino</option>
-                  <option value="F">Femenino</option>
-                 </select>
-              </p>   
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="vieport" content="width=device-width,initial-scale=1.0">
+  <title>DL Rio olimpics 2016</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+</head>
 
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+       <div class="container">
+      <div class="logo"> Juegos Olimpicos RIO 2016</div>
+       <nav>
+        <a href="#Top 10">Top 10</a>
+        <a href="#Olimpics-Games">Deportistas</a>
+        <a href="#Porcentaje">Porcentaje</a>
+       </nav>
+     </div>
 
+         
+          <p>
+            <select id="buttonOrder">
+              <option value="" disabled selected>ORDENAR</option>
+              <option value="a-z" id="az">A - Z</option>
+              <option value="z-a" id="za">Z - A</option>
+            </select>
+          </p>
+          <p>
+            <select name="medallas" id="medallas" class="medallas">
+              <option value="">Medallas</option>
+              <option value="Gold">Oro</option>
+              <option value="Silver">Plata</option>
+              <option value="Bronze">Bronce</option>
+            </select>
+          </p>
+      </nav>
+    </div>
+  </header>
 
-
-
-
-
-              </p>
-        </nav> 
-      </div>
-    </header >
-
-    <section id="hero">
-      <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
-      <!-- <form action="https:..."> -->
-        <select name="ordenAz" id="ordenAz" class="ordenAz">
-          <option value="AZ">"A-Z"</option>
-          <option value="ZA">"Z-A"</option>
-        </select>
-  
-    </section> 
-              
-     <section id="Olimpics-Games">
-       <table class="table">
-        <thead>
-          <tr>
-            <th>Nombre Atleta</th>
-            <th>Edad</th>
-            <th>Género</th>
-            <th>Deporte</th>
-            <th>Medalla</th>
-          </tr>
-        </thead>
-        <tbody id="contenido">
-          <tr>
-            <th>name</th>
-            <th>age</th>
-            <th>femal</th>
-            <th>sport</th>
-            <th>medal</th>
-          </tr>
-        </tbody>
-       </table>
-     </section>
-
-
+  <section id="hero">
+    <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
+  </section>
  
-   <section id="final">
-      <h2>videos </h2>
-      <button>Play</button>
-  </section> 
+  <section id="Porcentaje">
+    <canvas id="grafica"></canvas>
+  </section>  
+    
+  <section id="Olimpics-Games">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre Atleta</th>
+          <th>Edad</th>
+          <th>Género</th>
+          <th>Deporte</th>
+          <th>Medalla</th>
+        </tr>
+      </thead>
+      <tbody id="contenido">
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>femal</th>
+          <th>sport</th>
+          <th>medal</th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+  <section id="Top 10">
+    <h2>videos </h2>
+    <button>Play</button>
+  </section>
 
   <footer>
-      <div class="container">
-          <p>&copy; Rio 2016</p>
-      </div>
+    <div class="container">
+      <p>&copy; ProgramaYa 2021</p>
+    </div>
   </footer>
+  
   <script src="main.js" type="module"></script>
+ 
 </body>
-</html>
-   
-   <!-- <footer></footer>
-    <div id="root"></div>
-    
-  </body>
-</html> -->
 
+</html>
+
+    

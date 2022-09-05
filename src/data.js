@@ -1,3 +1,4 @@
+
 export const mostrarData = (datos) => {
     const data = datos["athletes"].map(elemento => elemento.name);
     return data;
@@ -13,46 +14,60 @@ export const dataAtletas = (datos) => {
     return atletas;
 }
 
-//ordenarlos en orden alfabetico
-export const ordenarNombresAZ = (option, data) => {
-    let copyData = [...data]
-    let az = copyData.sort(function (a, b) {
-        if (a.name > b.name) {
-            return 1;
-        } if (a.name < b.name) {
-            return -1;
-        }
-        return 0;
-    })
-    if (option == "AZ") {
-        return az
-    } else {
-        return az.reverse()
-    }
-
-};
-
-export const ordenarEdad = (data) => {
-    data.sort((a, b) => {
-        if (a.age == b.age) {
+//ordenarlos en orden alfabetico A-Z
+export const ordenarNombresA_Z = (datos) => {
+    let copyData = [...datos]
+    let order_atletas = copyData.sort((a, b) => {
+        if (a.name.toUpperCase() == b.name.toUpperCase()) {
             return 0;
         }
-        if (a.age < b.age) {
+        if (a.name.toUpperCase() < b.name.toUpperCase()) {
             return -1;
         }
         return 1;
-    });
-}
-export function filtrarMedallas(medallistas, data) {
-    const medallas = data.filter(function (datoMedalla) {
-        return datoMedalla.medal === medallistas
     })
-    return medallas
+    return order_atletas
 }
 
-export function calculoPorcentajeMedallas(medal,data){
-    let porcentajeMedallas=filtrarMedallas(data,medal)
-    let porcentaje= Math.round((medallas/porcentajeMedallas.length)*100);
-    return porcentaje
+//descendente Z-A
+export const ordenarNombresZ_A = (datos) => {
+    let copyData = [...datos]
+    copyData.sort((a, b) => {
+        if (a.name.toLowerCase() == b.name.toLowerCase()) {
+            return 0;
+        }
+        if (a.name > b.name) {
+            return -1;
+        }
+        return 1;
+    })
+    return copyData
 }
+
+//filtro por Medallas 
+export function filtrado(data, campofiltrado, valor) {
+    const medallas = data.filter(function (datoMedalla) {
+        return datoMedalla[campofiltrado] === valor
+    })
+    return medallas;
+}
+
+
+// ...........CALCULO..........
+
+export function calculo_porcentaje(data, campofiltrado, valor) {
+    const elemento_filtrado = filtrado(data, campofiltrado, valor)
+    const porcentaje = (elemento_filtrado.length / data.length) * 100
+    return Math.round(porcentaje);
+}
+
+
+
+
+
+
+
+
+
+
 
