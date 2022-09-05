@@ -106,7 +106,7 @@ header a:hover{
   font-size: 1.75em;
 
 }
-* #Reseña .container{ */
+#Reseña .container{
       text-align: center;
       padding: 200px 12px;
   } 
@@ -326,4 +326,3 @@ footer .container{
   #grafica{
     max-width: 500px;
 }
-
