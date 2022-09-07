@@ -50,6 +50,7 @@ export function filtrado(data, campofiltrado, valor) {
     const medallas = data.filter(function (datoMedalla) {
         return datoMedalla[campofiltrado] === valor
     })
+    
     return medallas;
 }
 
@@ -58,28 +59,12 @@ export function filtrado(data, campofiltrado, valor) {
 
 export function calculo_porcentaje(data, campofiltrado, valor) {
     const elemento_filtrado = filtrado(data, campofiltrado, valor)
-    const porcentaje = (elemento_filtrado.length / data.length) * 100
-    return Math.round(porcentaje);
+    const porcentaje = Math.round((elemento_filtrado.length / data.length) * 100);
+    console.log(elemento_filtrado);
+    return porcentaje;   
 }
 
 
 
-
-
-
-
-
-
-//  searchInput.addEventListener("input", () => {
-//     const value = e.target.value.toLowerCase()
-//      pintarData.foreach(dataAtletas  => {
-//          const isVisible =
-//         elemento.name.toLowel,Case().includes(value) ||
-//          elemento.sport.toLowerCase().includes(value)
-//          elemento.element.classList.toggle("hide", !isVisible)
-//         })
-// pintarData(isVisible)
-//  })
-// pintarData(dataAtletas)
 
 

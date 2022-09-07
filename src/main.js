@@ -70,7 +70,7 @@ console.log(mujeres);
 
 let hombres = calculo_porcentaje(dataAtletas, 'gender', 'M');
 console.log(hombres);
-
+console.log()
 
 //grafica de calculo
 // Obtener una referencia al elemento canvas del DOM
@@ -79,7 +79,7 @@ const $grafica = document.querySelector("#grafica");
 const etiquetas = ["Mujeres", "Hombres"]
 // Podemos tener varios conjuntos de datos. 
 const datosPorcentajes = {
-    data: [45, 50], // data = arreglo que debe tener la misma cantidad de valores que en etiquetas
+    data: [48, 52], // data = arreglo que debe tener la misma cantidad de valores que en etiquetas
     // Ahora debería haber tantos background colors como datos, es decir, para este ejemplo, 4
     backgroundColor: [
         'rgba(214,23,121,0.8)',
