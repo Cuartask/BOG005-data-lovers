@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="vieport" content="width=device-width,initial-scale=1.0">
-  <title>DL Rio olimpics 2016</title>
+  <title>Atletas Río Olimpics 2016</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,62 +15,46 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class = "logo"> Juegos Olimpicos RIO 2016 </div>
-
-      <nav class="nav">
-
-    
-        <!-- <div class="seeker"> -->
-
-          <!-- <div id="search-container">
-            <input type="search" id="search-input" placeholder="Busca tu atleta preferido" />
-            <button id="search">Search</button>
-          </div>  -->
-          <button>Conoce +</button>
-          <p>
-            <select id="buttonOrder">
-              <option value="" disabled selected>ORDENAR</option>
-              <option value="a-z" id="az">A - Z</option>
-              <option value="z-a" id="za">Z - A</option>
-            </select>
-          </p>
-          <p>
-            <select name="medallas" id="medallas" class="medallas">
-              <option value="">Medallas</option>
-              <option value="Gold">Oro</option>
-              <option value="Silver">Plata</option>
-              <option value="Bronze">Bronce</option>
-            </select>
-          </p>
-      </nav>
-    </div>
-  
-
+  <header class="logoFondo">
+   <!-- <img src="imagenes/ENSAYO.webp" alt=""> -->
+    <h2>JUEGOS OLIMPICOS RIO 2016</h2> 
+     <img src="imagenes/mascotas.png" alt="">
   </header>
 
-  <section id="hero">
-    <h1>Juegos Olimpicos<br>Rio de Janeiro<br>2016</h1>
-  </section>
+  <!-- <section >
+ 
+  </section> -->
 
-    
-    <canvas id="grafica"></canvas>
-    
 
-  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-
-  <!-- <section id="Olimpics-Games"> -->
-    <div class ="container_tabla" id="content_table">
+  <div class="container_tabla" id="content_table">
     <table class="table">
       <caption>Atletas que participaron en las Olimpiadas</caption>
       <thead>
         <tr>
-          <th>Nombre Atleta</th>
+          <th>
+            <div class="content-select-name">
+              <select id="buttonOrder">
+                <option value="nombre atleta">Nombre Atletas</option>
+                <option value="a-z" id="az">A - Z</option>
+                <option value="z-a" id="za">Z - A</option>
+              </select>
+            </div>
+            <i></i>
+          </th>
           <th>Edad</th>
           <th>Género</th>
           <th>Deporte</th>
-          <th>Medalla</th>
+          <th>
+            <div class="content-select">
+              <select name="medallas" id="medallas" class="medallas">
+                <option value="Gold">Medallas</option>
+                <option value="Gold">Oro</option>
+                <option value="Silver">Plata</option>
+                <option value="Bronze">Bronce</option>
+              </select>
+            </div>
+            <i></i>
+          </th>
         </tr>
       </thead>
       <tbody id="contenido">
@@ -84,25 +68,42 @@
       </tbody>
     </table>
   </div>
+
+
+  <!-- <section id="final"> -->
+    <div id="container_grafica">
+      <canvas id="grafica"></canvas>
+      
+    </div>
+    <div id="text">
+      <p>Sabias que dentro de los juegos Olimpicos el porcentaje de participacion de la mujer estuvo muy cercano al del
+        hombre? <br>
+        De los 2023 atletas 969 fueron mujeres (48%) y 1.054 fueron hombres (52%).
+      </p>
+    </div>
   <!-- </section> -->
 
+   <!--
+            VIDEO
+        -->
+        <section class="main-video">
+          <!-- <div class="video"> -->
+              <video width="100%" height="400" src="imagenes/videoplayback.mp4" autoplay loop muted></video>
+          <!-- </div> -->
+      </section>
 
-
-  <section id="final">
-    <h2>videos </h2>
-    <button>Play</button>
-  </section>
-
+      
+   <!--
+            FOOTER
+        -->
   <footer>
     <div class="container">
-      <p>&copy; ProgramaYa 2021</p>
+      <p>&copy; Mónica Rodriguez &amp; Katherine Cuartas</p>
     </div>
   </footer>
-  
+
   <script src="main.js" type="module"></script>
- 
+
 </body>
 
 </html>
-
-    

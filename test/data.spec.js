@@ -18,13 +18,10 @@ describe('ordenarNombresA_Z', () => {
 //test funcion filtrar
 
 describe('filtrado', () => {
-  it('filtrado', () => {
-    expect(typeof filtrado).toBe('function');
-  });
   it('filtra por medallas Gold', () => {
     let data = [{ medal: 'Gold' }];
     let medallas = "Gold";
-    let resultadoReal = filtrado(data, medallas);
+    let resultadoReal = filtrado(data, 'medal', medallas);
     let resultadoEsperado = [{ medal: 'Gold' }];
     expect(resultadoReal).toEqual(resultadoEsperado);
   });
@@ -34,13 +31,9 @@ describe('filtrado', () => {
 //test funcion calculo 
 
 describe('calculo_porcentaje', () => {
-  it('calculo_porcentaje', () => {
-    expect(typeof calculo_porcentaje).toBe('function');
-  });
-  let numeroUno = 1054
-  let numeroDos = 2023
+  let data = [{ medal: 'Gold' }];
   it('Debe retornar el porcentaje de mujeres y hombres', () => {
-    expect(calculo_porcentaje(numeroDos, numeroUno)).tostrictEqual(52);
+    expect(calculo_porcentaje(data, 'medal', 'Gold')).toBe(100);
   })
 });
 

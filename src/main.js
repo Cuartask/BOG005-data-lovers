@@ -82,8 +82,8 @@ const datosPorcentajes = {
     data: [48, 52], // data = arreglo que debe tener la misma cantidad de valores que en etiquetas
     // Ahora debería haber tantos background colors como datos, es decir, para este ejemplo, 4
     backgroundColor: [
-        'rgba(214,23,121,0.8)',
-        'rgba(10,20,200,0.8)',
+        'rgb(89, 48, 97)',
+        'rgb(84, 153, 199)',
     ],// Color de fondo
     borderColor: [
         'rgba(163,221,203,1)',

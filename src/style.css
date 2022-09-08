@@ -1,351 +1,147 @@
-*{
-  box-sizing: border-box;
+html{
   padding: 0;
   margin: 0;
 }
 
-html{
-  scroll-behavior: smooth;
+body {
+  font-family: 'Quicksand', sans-serif;
+
+  width: 80%;
 }
 
-body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-  margin-top: 116px;
-}
-
-h1{ font-size: 3.5em;}
-h2{font-size: 2.7em;}
-h3{ font-size: 2em;}
-p{ font-size: 1.25em ;}
-
-button{
-  font-size: 1.5em;
-  font-weight: bold ;
-  padding: 10px 20px ;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.5,);
-  box-shadow: 2px 2px 10 px  rgba(0,0,0,10);
-  color: white;
-  background-color: blueviolet;
-}
-
-button:hover{
-  background-color: rgb(101, 33, 165);
-}
-
-.container{
-  max-width: 1400px ;
-  margin: auto;
-}
-
-.color-acento{ color: blueviolet;}
-
-header{
-  background-color: rgb(245,245,245);
-
-}
-
-header .log{
-  margin: 0;
-  padding: 25px 30px;
-  font-weight: bold;
-  color: blueviolet;
-  font-size: 1.7em;
-}
-
-header .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-header nav{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-bottom: 25px;
-}
-
-header a{
-  padding: 5px 12px;
-  text-decoration: none;
-  font-weight: bold;
-  color: rgb(29, 190, 14);
-}
-
-header a:hover{
-  color:blueviolet ;
-}
-
-#hero{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 90vh;
-  color:white;
-  background-image:  linear-gradient(
-      0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-  ),
-  url("imagenes/logo-RJ.jpg");
-  
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  }
-
-#hero h1{
-      color: white
-  }
-
-#hero button{
-  margin: 0;
-  font-size: 1.75em;
-
-}
-
-#Reseña .container{
-      text-align: center;
-      padding: 200px 12px;
-} 
-
-#Olimpics-Games{
-  /* background-color: rgb(30,30,30); */
-  color:white;
-  text-align: center;
-  }
-
-#Olimpics-Games .container{
-      padding: 150px 12px;
-  }
-
-#Olimpics-Games h2{
-      margin-top: 0;
-      font-size: 3.2em;
-  }
-
-#Olimpics-Games p{
-      display: none;
-  }
-
-#Olimpics-Games .carta{
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 50px 0px;
-      margin: 30px;
-      border-radius: 15px;        
-  }
-
-.carta:first-child{
-      background-image: linear-gradient(
-      0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-  ),
-   url("imagenes/OIP-removebg-preview.png");
-  
-  }
-
-.carta:nth-child(2){
-      background-image: linear-gradient(
-      0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-  )
-  ,url("imagenes/OIP-removebg-preview.png");
-  }
-
-.carta:nth-child(3){
-      background-image: linear-gradient(
-      0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-  )
-  ,url("imagenes/OIP-removebg-preview.png");
-  }
-
-
-
-#final{
-  display:flex;
-  flex-direction: column;
+header {
+  height: 10vw;
+  margin-left: 5vw;
   justify-content: center;
   align-items: center;
+  background-color: rgb(84, 153, 199);
+  width: 80%;
+  margin-top: -40px;
+}
+
+img {
+height: 15vw;
+margin-left: 50vw;
+margin-top: -10vw;
+}
+
+.logoFondo h2{
+  margin-left: 5vw;
+  width: 25vw;
   text-align: center;
-  background-color: rgb(30,30,30);
-  color: white;
-  height: 80vh;
+  margin-top: 5vw;
+  color: beige;
 }
-#final h2{
-  font-size: 9vw;
+
+.container {
+  text-align: center;
+  padding: 200px 12px;
 }
 
 
-#final button{
-  font-size: 5vw;
-}
-footer{
-  background-color: rgb (230,230,230);
-}
-
-footer p{
+footer p {
   margin: 0;
   padding: 12px;
-  color: rgb(100,100,100);
+  color: rgb(100, 100, 100);
 }
 
-footer .container{
+footer .container {
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
-@media (min-width:720px){
-  header{
-      position:fixed;
-      width: 100%;
-  }
-  header .container{
-      flex-direction: row;
-      justify-content: space-between;
+/* @media (min-width:720px) { */
+  /* header {
+    position: fixed;
+    width: 100%;
   }
 
-  header nav{
-      flex-direction: row;
-      padding-bottom: 0;
-      padding-right: 20px ;
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-#hero h1{
-  font-size: 5em;
-}
-#Reseña .container{
-      display: flex;
-      justify-content: space-evenly;
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  } */
+
+  /* .hero h1 {
+    font-size: 5em;
   }
 
-#Reseña .texto{
-      width: 50%;
-      max-width: 600px;
-      text-align: initial;
-      padding-left: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  #Reseña .container {
+    display: flex;
+    justify-content: space-evenly;
   }
 
-#Reseña h2{
-      margin-top: 0px;
+  #Reseña .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-#Reseña .img-container{
-      background-image: url("imagenes/Rio\ de\ janeiro.jpg");
-      background-size: cover;
-      background-position: center center;
-      height: 500px;
-      width: 400px;
-
-  }
-}
-
-#Olimpics-Games .Games{
-  display: flex;
-  justify-content: center;
-}
-
-#Olimpics-Games p{
-  display: block;
-  margin-bottom: 30px;
-}
-
-#Olimpics-Games h2{
-  font-size: 4em;
-}
-
-#Olimpics-Games h3{
-  margin-top: 0px;
-}
-
-#Olimpics-Games .carta{
-  padding: 50px;
-  background-size: 100% 150px;
-  background-repeat: no-repeat;
-  background-position-y: 0;
-  background-color: rgba(50,50,50,0.5);
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-.carta:first-child{
-  background-image: linear-gradient(
-  0deg,
-  rgba(0,0,0,0.5)
-  rgba(0,0,0,0.5)
-)
-,url("imagenes/OIP-removebg-preview.png");
-
-}
-
-.carta:nth-child(2){
-  background-image: linear-gradient(
-  0deg,
-  rgba(0,0,0,0.5)
-  rgba(0,0,0,0.5)
-)
-,url("imagenes/OIP-removebg-preview.png");
-}
-
-.carta:nth-child(3){
-  background-image: linear-gradient(
-  0deg,
-  rgba(0,0,0,0.5)
-  rgba(0,0,0,0.5)
-)
-,url("imagenes/OIP-removebg-preview.png");
-}
-
-
-#final h2{
-  font-size: 5em;
-}
-
-#final button{
-  justify-content: flex-end;
-}
-
-footer .container{
-  align-items: flex-end;
-}
-@media (min-width: 1200px) {
-
+  #Reseña h2 {
+    margin-top: 0px;
   }
 
-  /* estilo de la grafica */
-  #grafica{
-    max-width: 500px;
+  #Reseña .img-container {
+    background-image: url("imagenes/Rio\ de\ janeiro.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+
+  }
+] */
+
+
+
+/* @media (min-width: 1200px) {} */
+
+
+/* estilo de la grafica */
+
+#grafica {
+  max-width: 500px;
+  font-size: 18px;
+  margin-top: 100px;
+  margin-left: 600px;
 }
+  /* animation-name: opening-logo;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes opening-logo {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+} */
 
 /* estilos tabla  */
-#content_table {
-  
-  color: black;
-  
-  
-  height: 500px;
-  overflow: scroll;
-  border: 1px solid #ccc;
-}
 
 .container_tabla {
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
+  color: black;
+  height: 500px;
+  overflow: scroll; 
+  margin-left: 10vw;
+  margin-top: 10vw;
+  width: 80vw;
+
 }
+
 
 .table {
   border: 3px solid rgb(84, 153, 199);
@@ -353,24 +149,31 @@ footer .container{
   margin: 0;
   padding: 0;
   table-layout: fixed;
+  width: 100%;
 }
 
 .table caption {
-  font-size: 25px;
+  font-size: 50px;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 9px 0px;
+  /* margin: 9px 0px; */
   color: rgb(89, 48, 97);
 }
 
 .table tr {
   background-color: rgb(208, 235, 235);
   border: 1px solid rgb(229, 148, 245);
+  height: 1vw;
 }
 
-.table th, .table td {
-  font-size: 16px;
-  padding: 8px;
+/* .table th {
+  margin: 50px;
+} */
+
+.table th,
+.table td {
+  font-size: 20px;
+  /* padding: 8px; */
   text-align: center;
 }
 
@@ -378,4 +181,130 @@ footer .container{
   text-transform: uppercase;
   background-color: rgb(52, 137, 158);
   color: whitesmoke;
+}
+
+.table tbody tr:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.table tbody td:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* @media screen and (max-width: 600px) {
+  .table {
+    border: 0px;
+  }
+
+  .table caption {
+    font-size: 20px;
+  }
+} */
+
+#medallas {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 250px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: rgb(52, 137, 158);
+  color: whitesmoke
+}
+
+#medallas i {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 13px);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left: 4px solid #2AC176;
+  border-bottom: 4px solid #2AC176;
+  transform: rotate(-45deg);
+  transition: all 0.25s ease;
+}
+
+/* #buttonOrder {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 250px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: rgb(52, 137, 158);
+  color: whitesmoke
+} */
+
+/* #buttonOrder i {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 13px);
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left: 4px solid #2AC176;
+  border-bottom: 4px solid #2AC176;
+  transform: rotate(-45deg);
+  transition: all 0.25s ease;
+} */
+
+#text {
+
+  position: relative;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  margin: 50px;
+  top: -400px;
+  left: 250px;
+  margin-top: 150px;
+}
+
+#text p {
+  position: absolute;
+  padding-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  border: dotted 3px #2AC176;
+
+  animation-name: opening-logo;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.main-video{
+
+  transform-origin: 0 0;
+  transform: skewY(-10deg);
+  margin-left: 35vw;
+  margin-bottom: 10vw;
+  margin-top: -200px;
+}
+
+.main-video .video{
+  overflow: hidden;
+  transform: skewY(10deg) scale(1.4, 1.4);
+}
+
+.main-video .video video{
+  width: 50%;
+  
+  
 }
